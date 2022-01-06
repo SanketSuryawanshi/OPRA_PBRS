@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assign the Task</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="add_assignment.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #myform {
+            margin: 30px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #heading {
+            font-size: x-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 25px;
+
+        }
+
+        input {
+            height: 35px;
+            width: 100%;
+            padding-left: 5px;
+            font-size: 22px;
+            outline: none;
+            border: 1px solid gray;
+        }
+
+        .Name {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .name1 {
+            width: 45%;
+        }
+
+        .Submit {
+            height: 40px;
+            width: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(212, 27, 27);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            /* margin-left: 200px;
+            margin-top: 500px; */
+            margin-top: 20px;
+        }
+
+        .Reset {
+            height: 40px;
+            width: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(27, 212, 36);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            /* margin-left: 60px;
+            margin-top: 500px; */
+            margin-top: 20px;
+        }
+        .upl_file1{
+            height: 40px;
+            width: 150px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(212, 27, 27);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <strong>
+        <p id="heading">Add Assignments</p>
+    </strong>
+    <div id="myform">
+
+        <form action="add_assignment.php" method="post" enctype="multipart/form-data">
+            <div class="Name">
+                <div class="name1">
+                    <label for=""><b>Assignment_Id:</b></label>
+                    <input type="text" id="assignment_id" placeholder="Please Enter Assignment_Id" name="assignment_id">
+                </div>
+                <div class="name1">
+                    <label for=""><b>UserID:</b></label>
+                    <input type="text" id="userid" placeholder="Please Enter UserID"name="userid">
+                </div>
+            </div>
+            <br>
+            <div class="Name">
+                <div class="name1">
+                    <label for=""><b>Title:</b></label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="name1">
+                    <label for=""><b>Statement:</b></label>
+                    <textarea id="statement" name="statement" cols="40" rows="1"></textarea>
+                </div>
+            </div>
+             
+             
+            <br>
+            <div class="Name">
+                <div class="name1">
+                    <label for=""><b>Assigned Date</b></label>
+                    <input type="date" id="assignedDate" name="assignedDate">
+                </div>
+                <div class="name1">
+                    <label for=""><b>Due Date</b></label>
+                    <input type="date" id="dueDate" name="dueDate">
+                </div>
+            </div>
+            <br>
+             <div class="Name">
+                <div >
+                  
+                    <h3><b>Upload Problem Statement/Task File</b> </h3>
+                    <input type="file" name="Answer_File"> <br> <br>
+                    <button type="submit" name="save" class="upl_file1">Upload File</button>
+                 
+                </div>
+              </div>
+            <br><input type="submit" id="add" value="Submit" class="Submit" onclick="Javascript:addRow()">
+            <!-- <td> <br><a href=""><input type="button" id="add" value="Add" onclick="Javascript:addRow()"></a></td> -->
+
+            <input type="reset" value="Reset" id="reset" class="Reset">
+
+        </form>
+    </div>
+      
+        &nbsp;
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add User</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="add_user.js"></script>
+        <style>
+            body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #myform {
+            margin: 30px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        label {
+            font-size: 20px;
+
+        }
+        #heading{
+            font-size: x-large;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input {
+            height: 35px;
+            width: 100%;
+            padding-left: 5px;
+            font-size: 22px;
+            outline: none;
+            border: 1px solid gray;
+        }
+        #add{
+            height: 40px;
+            width: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(212, 27, 27);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        
+        }
+
+        #reset{
+            height: 40px;
+            width: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(27, 212, 36);
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        </style>
+</head>
+
+<body onload="load()">
+    <b id="heading">USER DATA</b>
+    <div id="myform">
+        
+        <table>
+            <form action="add_user.php" method="post">
+                <div class="Name">
+
+                    <label for=""><b>Name:</b></label>
+                    <input type="text" id="name" placeholder="Please Enter Name" name="name"><br> <br>
+                    <label for=""><b>User_ID:</b></label>
+                    <input type="text" id="userid" placeholder="Please Enter User_ID" name="userid"><br> <br>
+                    <label for=""><b>Mob_No:</b></label>
+                    <input type="number" id="mobileNumber" placeholder="Please Enter mobileNumber" name="mobileNumber"><br> <br>
+                    <label for=""><b>Email_ID:</b></label>
+                    <input type="email" id="email" placeholder="Please Enter Email_Id"name="email"><br> <br>
+                    <br><input type="submit" id="add" value="Add" onclick="Javascript:addRow()">
+                    <input type="reset" value="Reset" id="reset" onclick="">
+
+                </div>
+            </form>
+        </table>
+    </div>
+    <div id="mydata">
+        <b>Current data in the system ...</b>
+        <!-- <table id="myTableData"  border="1" cellpadding="2">
+    <tr>
+       
+        <td><b>Name</b></td>
+        <td><b>Age</b></td>
+        <td>&nbsp;</td>
+    </tr>
+</table> -->
+        <table class="table table-bordered" id="myTableData">
+            <thead class="thead-dark" class="table table-bordered">
+                <tr class="table table-bordered">
+                    <th scope="col">Name</th>
+                    <th scope="col">USERId</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">&nbsp;</th>
+                    <!-- <th scope="col">Handle</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- <th scope="row">Otto</th>
+        <td>Mark</td>
+        <td></td>
+        <td>@mdo</td> -->
+                </tr>
+            </tbody>
+        </table>
+        &nbsp;
+
+    </div>
+
+</body>
+
+</html>

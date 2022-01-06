@@ -76,3 +76,13 @@ footer p{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
+
+.assignmets .right_div form input{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.dashboard_div .right_div form input{
+    box-shadow: none !important;
+    outline: none !important;
+}
